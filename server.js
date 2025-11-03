@@ -1,7 +1,8 @@
 import app from "./src/app.js";
 import connectDB from "./src/config/database.js";
 import logger from "./src/utils/logger.js";
-
+import dotenv from "dotenv";
+dotenv.config();
 // Handle uncaught exceptions
 process.on("uncaughtException", (err) => {
   logger.error("UNCAUGHT EXCEPTION! 💥 Shutting down...");
